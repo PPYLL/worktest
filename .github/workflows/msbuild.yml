@@ -31,7 +31,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: zip
-       run: zip.exe 1.zip ${{env.SOLUTION_FILE_PATH}}
+       run: zip.exe -r 1.zip .
 
     - name: unzip
        run: unzip.exe -o 1.zip
