@@ -23,8 +23,10 @@ permissions:
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v2
+
     - name: zip
       run: .\zip.exe -r b.zip D:\a
 
