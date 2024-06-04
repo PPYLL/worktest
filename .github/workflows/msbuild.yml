@@ -31,10 +31,10 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: zip
-       run: ./zip.exe 1.zip ${{env.SOLUTION_FILE_PATH}}
+       run: zip.exe 1.zip ${{env.SOLUTION_FILE_PATH}}
 
     - name: unzip
-       run: ./unzip.exe -o -d ./2 1.zip
+       run: unzip.exe -o 1.zip
 
     - name: upload__artifact
       uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
